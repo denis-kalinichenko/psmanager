@@ -16,6 +16,18 @@ $(document).ready(function() {
         fadeOut: 200
     });
 
+    $.ajaxSetup({
+        type: "POST",
+        url: BASE_URL+"/"
+    });
+    $( document ).ajaxStart(function() {
+        preloader.on();
+    }).ajaxComplete(function() {
+        preloader.off();
+    }).ajaxError(function(jqXHR, textStatus, errorThrown) {
+        console.log(textStatus + ': ' + errorThrown);
+    });
+
     $(".navbar ul:not(.navbar-right) li a").on("click", function() {
         if($(this).hasClass("navbar-brand")) {
             $(".navbar-nav li").removeClass("active");

@@ -3,24 +3,14 @@
  */
 
 $(document).ready(function() {
-    $("#generate").unbind().on("click", function(event) {
-        event.preventDefault();
-        preloader.on();
-
+    $("#generate").unbind().on("click", function() {
         var data = {
             action: "generate"
         };
         $.ajax({
-            data: data,
-            type: "POST",
-            url: BASE_URL+"/"
+            data: data
         }).done(function(data) {
             $("#inputPassword").val(data).focus();
-        }).fail(function(jqXHR, textStatus, errorThrown) {
-            // If fail
-            console.log(textStatus + ': ' + errorThrown);
-        }).always(function() {
-            preloader.off();
         });
     });
 });
