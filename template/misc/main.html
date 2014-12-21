@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Add a new service</h3>
+        </div>
+        <div class="panel-body">
+            <div class="alert alert-dismissable alert-danger" style="display: none">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>Oh snap!</strong> <a href="javascript:void(0)" class="alert-link">Change a few things up</a> and try submitting again.
+            </div>
+
+
+            <form class="form-horizontal" method="post" action="<?php echo BASE_URL; ?>/" name="addValue">
+                <fieldset>
+                    <legend></legend>
+                    <div class="form-group">
+                        <label for="inputSite" class="col-lg-2 control-label">Site</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputSite" placeholder="site" name="site" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="inputPassword" placeholder="password" name="key"
+                                   required>
+                        </div>
+                        <div class="col-lg-2">
+                            <button id="generate" class="btn btn-material-pink">Generate</button>
+                        </div>
+
+                        <label for="inputKey" class="col-lg-2 control-label">Key</label>
+
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputKey" placeholder="key" name="key" required>
+                        </div>
+
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button type="submit" class="btn btn-primary"><i class="mdi-navigation-check"></i> Submit</button>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var BASE_URL = "<?php echo BASE_URL; ?>";
+    var TPL_URL = "<?php echo TPL_URL; ?>";
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="<?php echo TPL_URL; ?>/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/js/ripples.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/js/material.min.js"></script>
+
+<script type="text/javascript" src="<?php echo TPL_URL; ?>/js/materialPreloader.min.js"></script>
+
+<script src="<?php echo TPL_URL; ?>/js/scripts.js"></script>
+<script src="<?php echo TPL_URL; ?>/js/add.js"></script>
