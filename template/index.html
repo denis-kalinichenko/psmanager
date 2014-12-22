@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><?php echo APP_NAME; ?></title>
+
     <link href="<?php echo TPL_URL; ?>/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/css/ripples.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/css/material-wfont.min.css" rel="stylesheet">
-    <link href="<?php echo TPL_URL; ?>/css/materialPreloader.min.css" rel="stylesheet">
+
+    <!-- Material Theme -->
+    <link href="<?php echo TPL_URL; ?>/css/material-theme/snackbar.min.css" rel="stylesheet">
+    <link href="<?php echo TPL_URL; ?>/css/material-theme/ripples.min.css" rel="stylesheet">
+    <link href="<?php echo TPL_URL; ?>/css/material-theme/material-wfont.min.css" rel="stylesheet">
+    <link href="<?php echo TPL_URL; ?>/css/material-theme/materialPreloader.min.css" rel="stylesheet">
+
     <link href="<?php echo TPL_URL; ?>/css/main.css" rel="stylesheet">
 
     <script type="text/javascript">
@@ -16,19 +21,21 @@
         var TPL_URL = "<?php echo TPL_URL; ?>";
     </script>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="<?php echo TPL_URL; ?>/js/jquery.min.js"></script>
     <script src="<?php echo TPL_URL; ?>/js/bootstrap.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/js/ripples.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.1/js/material.min.js"></script>
+    <script type="text/javascript" src="<?php echo TPL_URL; ?>/js/material-theme/ripples.min.js"></script>
+    <script type="text/javascript" src="<?php echo TPL_URL; ?>/js/material-theme/material.min.js"></script>
 
-    <script type="text/javascript" src="<?php echo TPL_URL; ?>/js/materialPreloader.min.js"></script>
+
+    <script type="text/javascript" src="<?php echo TPL_URL; ?>/js/material-theme/snackbar.min.js"></script>
+    <script type="text/javascript" src="<?php echo TPL_URL; ?>/js/material-theme/materialPreloader.min.js"></script>
 
     <script src="<?php echo TPL_URL; ?>/js/scripts.js"></script>
 </head>
 <body>
 
-<div class="navbar navbar-material-deeporange">
+<div class="navbar navbar-warning">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
             <span class="icon-bar"></span>
