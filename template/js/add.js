@@ -2,8 +2,8 @@
  * Created by Denis on 2014-12-20.
  */
 
-$(document).ready(function() {
-    $("#generate").unbind().on("click", function() {
+
+    $("#generate").on("click", function() {
         var data = {
             action: "generate"
         };
@@ -17,4 +17,3 @@ $(document).ready(function() {
     $("#addValue").submit(function() {
         alert("addValue");
     });
-});

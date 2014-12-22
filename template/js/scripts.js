@@ -11,10 +11,11 @@ function go(page) {
         page: page
     };
     $.ajax({
-        data: data
+        data: data,
+        dataType: 'html'
     }).done(function(data) {
         el.bind("webkitTransitionEnd oTransitionEnd otransitionend transitionend msTransitionEnd", function(){
-            el.html(data).removeClass("animate");
+            el.html($(data)).removeClass("animate");
         });
     });
 }
