@@ -13,4 +13,8 @@ $(document).ready(function() {
             $("#inputPassword").val(data).focus();
         });
     });
+
+    $("#addValue").submit(function() {
+        alert("addValue");
+    });
 });

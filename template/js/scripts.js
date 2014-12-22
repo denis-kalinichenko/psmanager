@@ -2,6 +2,23 @@
  * Created by Denis on 2014-12-20.
  */
 
+function go(page) {
+    console.log("open "+page);
+    var el = $("#smartContent");
+    el.addClass("animate");
+    var data = {
+        action: "open",
+        page: page
+    };
+    $.ajax({
+        data: data
+    }).done(function(data) {
+        el.bind("webkitTransitionEnd oTransitionEnd otransitionend transitionend msTransitionEnd", function(){
+            el.html(data).removeClass("animate");
+        });
+    });
+}
+
 $(document).ready(function() {
     $.material.init();
 
@@ -25,15 +42,13 @@ $(document).ready(function() {
     }).ajaxComplete(function() {
         preloader.off();
     }).ajaxError(function(jqXHR, textStatus, errorThrown) {
-        console.log(textStatus + ': ' + errorThrown);
+        $.snackbar({content: "<b>Connection error:</b> "+jqXHR.type});
     });
 
-    $(".navbar ul:not(.navbar-right) li a").on("click", function() {
-        if($(this).hasClass("navbar-brand")) {
-            $(".navbar-nav li").removeClass("active");
-        } else {
-            $(this).parent("li").addClass("active").siblings().removeClass("active");
-        }
+    $("a[data-open]").unbind().on("click", function() {
+        var page = $(this).data("open");
+        go(page);
+        $(this).parent("li").addClass("active").siblings("li").removeClass("active");
     });
 
     $("#logout").on("click", function() {

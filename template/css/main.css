@@ -4,3 +4,10 @@ body {
 .load-bar {
     z-index: 1;
 }
+#smartContent {
+    transition: all 300ms ease;
+}
+.animate {
+    transform: translateY(5%)  scale(0.9);
+    opacity: 0;
+}
