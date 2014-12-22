@@ -1,5 +1,6 @@
 body {
     /*background-color: #fff;*/
+    padding-top: 70px;
 }
 .load-bar {
     z-index: 1;
@@ -10,4 +11,9 @@ body {
 .animate {
     transform: translateY(5%)  scale(0.9);
     opacity: 0;
+}
+#actionButton {
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
 }

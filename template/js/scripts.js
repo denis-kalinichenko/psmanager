@@ -4,8 +4,7 @@
 
 function go(page) {
     console.log("open "+page);
-    var el = $("#smartContent");
-    el.addClass("animate");
+    var el = $("#smartContent").addClass("animate");
     var data = {
         action: "open",
         page: page
@@ -46,7 +45,7 @@ $(document).ready(function() {
         $.snackbar({content: "<b>Connection error:</b> "+jqXHR.type});
     });
 
-    $("a[data-open]").unbind().on("click", function() {
+    $("[data-open]").unbind().on("click", function() {
         var page = $(this).data("open");
         go(page);
         $(this).parent("li").addClass("active").siblings("li").removeClass("active");

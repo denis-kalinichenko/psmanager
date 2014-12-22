@@ -35,7 +35,7 @@
 </head>
 <body>
 
-    <div class="navbar navbar-warning">
+    <div class="navbar navbar-fixed-top navbar-warning">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
                 <span class="icon-bar"></span>
@@ -67,6 +67,7 @@
         <?php require_once MISC_DIR."/".$body.".html"; ?>
     </div>
 
+    <button data-open="addValue" id="actionButton" class="btn btn-fab btn-raised btn-material-red btn-block"><i class="mdi-image-edit"></i></button>
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
